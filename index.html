@@ -408,6 +408,7 @@ section.alt .tcard{background:var(--cream)}
 .phead .crumb{color:var(--ink)}
 .phead .crumb a{color:var(--gtxt)}
 .phead h1{font-weight:600}
+.card li.addon{margin-top:1.7em}.card li .gift{display:inline-block;font-family:'Kanit',sans-serif;font-weight:600;font-size:.82em;line-height:1;padding:.32em .7em;border-radius:999px;margin-right:.35em;background:linear-gradient(135deg,#F3DE9E 0%,#D9B865 35%,#C8A24A 65%,#A8842F 100%);color:#07152F;box-shadow:0 3px 10px rgba(200,162,74,.45);vertical-align:.08em}
 .phead h1 .free{display:inline-block;vertical-align:middle;font-size:.78em;line-height:1;padding:.3em .8em;border-radius:999px;font-weight:700;margin-left:.3em;position:relative;top:-.28em;letter-spacing:.02em;background:linear-gradient(135deg,#F3DE9E 0%,#D9B865 35%,#C8A24A 65%,#A8842F 100%);color:#07152F;box-shadow:0 6px 18px rgba(200,162,74,.6),inset 0 1px 0 rgba(255,255,255,.6)}
 nav.main a.hot{background:var(--nbg,#07152F);color:#fff;box-shadow:0 6px 16px rgba(7,21,47,.22)}nav.main a.hot:hover,nav.main a.hot.on,.dd.open>a.hot{background:#13274D;color:#fff}nav.main a.hot .car{color:#E3C77E}
 html[data-theme=dark] nav.main a.hot,html[data-theme=dark] .dd.open>a.hot{background:#F3EEE1;color:#07152F}html[data-theme=dark] nav.main a.hot .car{color:#A8842F}
@@ -1056,7 +1057,7 @@ const TODAY=new Date();TODAY.setHours(0,0,0,0);
 
 /* ---------- content ---------- */
 const SERVICES=[
- {ic:'ledger',t:'รับทำบัญชีรายเดือน',d:'บันทึกบัญชีตามมาตรฐาน คิดค่าบริการตามปริมาณเอกสาร',l:['บันทึกบัญชีตามเอกสารที่ลูกค้าส่ง','กระทบยอดเงินฝากธนาคาร','จัดทำรายงานภาษีซื้อ-ภาษีขาย','งบกำไรขาดทุนรายเดือน','บริการเสริม: ออกเอกสารในระบบให้ทั้งฝั่งขายและค่าใช้จ่าย รวมหนังสือรับรองหัก ณ ที่จ่าย']},
+ {ic:'ledger',t:'รับทำบัญชีรายเดือน',d:'บันทึกบัญชีตามมาตรฐาน คิดค่าบริการตามปริมาณเอกสาร',l:['บันทึกบัญชีตามเอกสารที่ลูกค้าส่ง','กระทบยอดเงินฝากธนาคาร','จัดทำรายงานภาษีซื้อ-ภาษีขาย','<span class="gift">แถมฟรี</span> งบกำไรขาดทุนรายเดือน','บริการเสริม: ออกเอกสารในระบบให้ทั้งฝั่งขายและค่าใช้จ่าย รวมหนังสือรับรองหัก ณ ที่จ่าย']},
  {ic:'taxform',t:'ยื่นภาษีรายเดือน',d:'จัดทำและยื่นแบบภาษีรายเดือนตรงตามกำหนด',l:['ภ.ง.ด.1, 3, 53','ภ.พ.30 (VAT)','ภ.พ.36 / ภ.ง.ด.54']},
  {ic:'shield',t:'ประกันสังคม',d:'ขึ้นทะเบียน แจ้งเข้า-ออก และนำส่งเงินสมทบทุกเดือน',l:['ขึ้นทะเบียนนายจ้าง/ลูกจ้าง','สปส.1-10 รายเดือน','แจ้งเปลี่ยนแปลงข้อมูล']},
  {ic:'closing',t:'งบการเงินและยื่นภาษีประจำปี',d:'ปิดงบการเงิน จัดหาผู้สอบบัญชี นำส่งงบการเงิน และยื่นภาษีประจำปีสำหรับนิติบุคคล',l:['ภ.ง.ด.51 / ภ.ง.ด.50','ส่งงบ DBD e-Filing','บัญชีผู้ถือหุ้น (บอจ.5) / ภ.ง.ด.1ก']},
@@ -1073,7 +1074,7 @@ const TOOLS=[
  {h:'vat-late',ic:'vatlate',q:'จด VAT ล่าช้า',t:'โปรแกรมคำนวณค่าปรับจดทะเบียน VAT ล่าช้า',d:'ภาษีย้อนหลัง เบี้ยปรับ 2 เท่า และเงินเพิ่ม 1.5%/เดือน เมื่อรายได้เกิน 1.8 ล้านบาทแล้วไม่จด VAT ภายใน 30 วัน'},
 ];
 $('svc-mini').innerHTML=SERVICES.slice(0,4).map(s=>`<a class="card" href="#services"><div class="ic">${ICON[s.ic]}</div><h3>${s.t}</h3><p>${s.d}</p></a>`).join('');
-$('svc-full').innerHTML=SERVICES.map((s,i)=>`<div class="card" id="svc-${i}"><div class="ic">${ICON[s.ic]}</div><h3>${s.t}</h3><p>${s.d}</p><ul>${s.l.map(x=>`<li>${x}</li>`).join('')}</ul><div class="svc-act">${s.ic==='register'?'<a class="tbtn" data-form>กรอกแบบฟอร์มจดทะเบียน →</a>':`<a class="tbtn" data-topic="${i}">กรอกแบบฟอร์ม →</a>`}<a class="lnk" href="https://lin.ee/OPLnhP7" target="_blank" rel="noopener">ทักไลน์</a></div></div>`).join('');
+$('svc-full').innerHTML=SERVICES.map((s,i)=>`<div class="card" id="svc-${i}"><div class="ic">${ICON[s.ic]}</div><h3>${s.t}</h3><p>${s.d}</p><ul>${s.l.map(x=>`<li${x.startsWith('บริการเสริม')?' class="addon"':''}>${x}</li>`).join('')}</ul><div class="svc-act">${s.ic==='register'?'<a class="tbtn" data-form>กรอกแบบฟอร์มจดทะเบียน →</a>':`<a class="tbtn" data-topic="${i}">กรอกแบบฟอร์ม →</a>`}<a class="lnk" href="https://lin.ee/OPLnhP7" target="_blank" rel="noopener">ทักไลน์</a></div></div>`).join('');
 const tcard=t=>`<div class="tcard"><div class="ti">${ICON[t.ic]}</div><h3>${t.t}</h3><p>${t.d}</p><a class="tbtn" href="#${t.h}">เปิดใช้งาน →</a></div>`;
 $('tools-hub').innerHTML=TOOLS.map(tcard).join('');
 $('ddMenu').innerHTML=`<a href="#help" class="dd-all"><span class="i">${ICON.system}</span>ดูตัวช่วยทั้งหมด</a>`+TOOLS.map(t=>`<a href="#${t.h}"><span class="i">${ICON[t.ic]}</span>${t.t.replace('โปรแกรม','')}</a>`).join('');
