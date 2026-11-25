@@ -1593,7 +1593,7 @@ window.addEventListener('hashchange',()=>{if(location.hash==='#contact'&&tpPendi
 const VIEWS=['home','services','help','about','contact','articles','article',...TOOLS.map(t=>t.h)];
 const HELPV=['help',...TOOLS.map(t=>t.h)];
 function route(){
- let h=(location.hash.length>1?location.hash:'#help').slice(1);let nav=h;
+ let h=(location.hash||'#home').slice(1);let nav=h;
  if(h.startsWith('a-')&&showArticle(h)){h='article';nav='articles';}
  else if(!VIEWS.includes(h))h=nav='home';
  VIEWS.forEach(v=>{const el=$('v-'+v);if(el){el.classList.remove('show');if(v===h){void el.offsetWidth;el.classList.add('show');}}});
