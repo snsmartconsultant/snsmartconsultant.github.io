@@ -408,6 +408,9 @@ section.alt .tcard{background:var(--cream)}
 .phead .crumb{color:var(--ink)}
 .phead .crumb a{color:var(--gtxt)}
 .phead h1{font-weight:600}
+.phead h1 .free{display:inline-block;vertical-align:middle;font-size:.78em;line-height:1;padding:.3em .8em;border-radius:999px;font-weight:700;margin-left:.3em;position:relative;top:-.28em;letter-spacing:.02em;background:linear-gradient(135deg,#F3DE9E 0%,#D9B865 35%,#C8A24A 65%,#A8842F 100%);color:#07152F;box-shadow:0 6px 18px rgba(200,162,74,.6),inset 0 1px 0 rgba(255,255,255,.6)}
+nav.main a.hot{background:var(--nbg,#07152F);color:#fff;box-shadow:0 6px 16px rgba(7,21,47,.22)}nav.main a.hot:hover,nav.main a.hot.on,.dd.open>a.hot{background:#13274D;color:#fff}nav.main a.hot .car{color:#E3C77E}
+html[data-theme=dark] nav.main a.hot,html[data-theme=dark] .dd.open>a.hot{background:#F3EEE1;color:#07152F}html[data-theme=dark] nav.main a.hot .car{color:#A8842F}
 .phead p{color:var(--ink)}
 .panel h3 .n{background:var(--nbg);color:var(--gold2)}
 .rbox{border-radius:24px}
@@ -557,14 +560,14 @@ html[data-theme=dark] footer .fl img{height:48px;mix-blend-mode:screen;filter:in
   <button class="themet" id="themeT" aria-label="สลับโหมดสว่าง/มืด" title="โหมดสว่าง/มืด"><svg class="moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button>
   <button class="burger" id="burger" aria-label="เปิดเมนู"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#07152F" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
   <nav class="main" id="nav">
+   <div class="dd">
+    <a href="#help" data-nav="help" class="hot">ตัวช่วยธุรกิจ <span class="car">▾</span></a>
+    <div class="menu" id="ddMenu"></div>
+   </div>
    <a href="#home" data-nav="home">หน้าแรก</a>
    <div class="dd">
     <a href="#services" data-nav="services">บริการ <span class="car">▾</span></a>
     <div class="menu" id="svcMenu"></div>
-   </div>
-   <div class="dd">
-    <a href="#help" data-nav="help">ตัวช่วยธุรกิจ <span class="car">▾</span></a>
-    <div class="menu" id="ddMenu"></div>
    </div>
    <a href="#articles" data-nav="articles">บทความ</a>
    <a href="#about" data-nav="about">เกี่ยวกับเรา</a>
@@ -671,7 +674,7 @@ html[data-theme=dark] footer .fl img{height:48px;mix-blend-mode:screen;filter:in
 <div class="view" id="v-article"><div id="aOne"></div></div>
 <!-- ============ HELP HUB ============ -->
 <div class="view" id="v-help">
- <div class="phead"><div class="wrap"><div class="crumb"><a href="#home">หน้าแรก</a> / ตัวช่วยธุรกิจ</div><h1>ตัวช่วยธุรกิจ</h1><p>โปรแกรมคำนวณภาษี ค่าปรับ และออกเอกสารธุรกิจ อัปเดตตามกฎหมายปี 2569</p></div></div>
+ <div class="phead"><div class="wrap"><div class="crumb"><a href="#home">หน้าแรก</a> / ตัวช่วยธุรกิจ</div><h1>ตัวช่วยธุรกิจ <span class="free">ฟรี</span></h1><p>โปรแกรมคำนวณภาษี ค่าปรับ และออกเอกสารธุรกิจ อัปเดตตามกฎหมายปี 2569</p></div></div>
  <section class="blk"><div class="wrap"><div class="wheel" id="wheelHub"></div>
   <p class="wheel-hint" style="margin-bottom:48px">เลื่อนเมาส์ไปที่วงกลมเพื่อดูรายละเอียด หรือเลือกจากรายการด้านล่าง</p><div class="grid g4" id="tools-hub"></div>
   <div class="ctaband" style="margin-top:40px"><div><h3>หมายเหตุ</h3><p>เครื่องมือทั้งหมดเป็นการประมาณการเบื้องต้นเพื่อวางแผน ไม่ใช่การประเมินอย่างเป็นทางการ กรุณาตรวจสอบกับหน่วยงานหรือปรึกษาทีมบัญชีก่อนยื่นแบบจริง</p></div><div class="lb-row"><a href="#contact" class="btn gold">ปรึกษาเรา →</a><a class="linebtn" href="https://lin.ee/OPLnhP7" target="_blank" rel="noopener" aria-label="เพิ่มเพื่อนทาง LINE"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/th.png" alt="เพิ่มเพื่อน" height="36" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="lb-fb"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="#fff" d="M12 4C6.9 4 3 7.3 3 11.3c0 3.6 3.1 6.6 7.3 7.2l-.4 2.6 3.3-2.5c4.7-.3 7.8-3.5 7.8-7.3C21 7.3 17.1 4 12 4z"/></svg>เพิ่มเพื่อน</span></a></div></div>
@@ -681,7 +684,7 @@ html[data-theme=dark] footer .fl img{height:48px;mix-blend-mode:screen;filter:in
 <!-- ============ PIT CALCULATOR ============ -->
 <div class="view" id="v-tax-calculator">
  <div class="phead"><div class="wrap"><div class="crumb"><a href="#home">หน้าแรก</a> / <a href="#help">ตัวช่วยธุรกิจ</a> / คำนวณภาษีบุคคลธรรมดา</div>
-  <h1>คำนวณภาษีเงินได้บุคคลธรรมดา ปีภาษี 2569</h1><p>สำหรับแบบ ภ.ง.ด.90 / ภ.ง.ด.91 (รายได้ ม.ค.–ธ.ค. 2569 ยื่นแบบต้นปี 2570) กรอกเฉพาะรายการที่มี ผลคำนวณอัปเดตทันที</p></div></div>
+  <h1>คำนวณภาษีเงินได้บุคคลธรรมดา ปีภาษี 2569 <span class="free">ฟรี</span></h1><p>สำหรับแบบ ภ.ง.ด.90 / ภ.ง.ด.91 (รายได้ ม.ค.–ธ.ค. 2569 ยื่นแบบต้นปี 2570) กรอกเฉพาะรายการที่มี ผลคำนวณอัปเดตทันที</p></div></div>
  <div class="tool"><div class="wrap tgrid">
   <div>
    <div class="panel">
@@ -766,7 +769,7 @@ html[data-theme=dark] footer .fl img{height:48px;mix-blend-mode:screen;filter:in
 <!-- ============ MEETING MINUTES ============ -->
 <div class="view" id="v-minutes">
  <div class="phead"><div class="wrap"><div class="crumb"><a href="#home">หน้าแรก</a> / <a href="#help">ตัวช่วยธุรกิจ</a> / วาระการประชุม</div>
-  <h1>ตัวช่วยวาระการประชุม</h1><p>ประชุมสามัญผู้ถือหุ้น ประชุมวิสามัญ และประชุมคณะกรรมการ มีวาระตั้งต้นให้ ช่วยตรวจองค์ประชุมผู้ถือหุ้นเบื้องต้น ดาวน์โหลดเป็น PDF หรือรูปภาพได้ทันที</p></div></div>
+  <h1>ตัวช่วยวาระการประชุม <span class="free">ฟรี</span></h1><p>ประชุมสามัญผู้ถือหุ้น ประชุมวิสามัญ และประชุมคณะกรรมการ มีวาระตั้งต้นให้ ช่วยตรวจองค์ประชุมผู้ถือหุ้นเบื้องต้น ดาวน์โหลดเป็น PDF หรือรูปภาพได้ทันที</p></div></div>
  <div class="tool"><div class="wrap">
   <div class="t2">
    <div class="panel">
@@ -822,7 +825,7 @@ html[data-theme=dark] footer .fl img{height:48px;mix-blend-mode:screen;filter:in
 <!-- ============ WHT ============ -->
 <div class="view" id="v-wht-calculator">
  <div class="phead"><div class="wrap"><div class="crumb"><a href="#home">หน้าแรก</a> / <a href="#help">ตัวช่วยธุรกิจ</a> / หัก ณ ที่จ่าย</div>
-  <h1>คำนวณภาษีหัก ณ ที่จ่าย</h1><p>ค่าบริการและเงินได้อื่น (ภ.ง.ด.3/53) คำนวณครบ 3 วิธี: หักปกติ · ออกภาษีแทนครั้งเดียว · ออกภาษีแทนตลอดไป และเงินเดือนพนักงาน (ภ.ง.ด.1)</p></div></div>
+  <h1>คำนวณภาษีหัก ณ ที่จ่าย <span class="free">ฟรี</span></h1><p>ค่าบริการและเงินได้อื่น (ภ.ง.ด.3/53) คำนวณครบ 3 วิธี: หักปกติ · ออกภาษีแทนครั้งเดียว · ออกภาษีแทนตลอดไป และเงินเดือนพนักงาน (ภ.ง.ด.1)</p></div></div>
  <div class="tool"><div class="wrap">
   <div class="tabs" id="whtTab"><button data-t="svc" class="on">ค่าบริการ / เงินได้อื่น (ภ.ง.ด.3/53)</button><button data-t="sal">เงินเดือนพนักงาน (ภ.ง.ด.1)</button></div>
 
@@ -891,7 +894,7 @@ html[data-theme=dark] footer .fl img{height:48px;mix-blend-mode:screen;filter:in
 <!-- ============ COMPARE ============ -->
 <div class="view" id="v-compare">
  <div class="phead"><div class="wrap"><div class="crumb"><a href="#home">หน้าแรก</a> / <a href="#help">ตัวช่วยธุรกิจ</a> / บุคคลธรรมดา vs นิติบุคคล</div>
-  <h1>เปรียบเทียบภาษี บุคคลธรรมดา vs นิติบุคคล</h1><p>เทียบภาระภาษีและเงินที่เจ้าของได้รับจริง ระหว่างทำธุรกิจในนามบุคคลธรรมดากับจดทะเบียนบริษัท (SME)</p></div></div>
+  <h1>เปรียบเทียบภาษี บุคคลธรรมดา vs นิติบุคคล <span class="free">ฟรี</span></h1><p>เทียบภาระภาษีและเงินที่เจ้าของได้รับจริง ระหว่างทำธุรกิจในนามบุคคลธรรมดากับจดทะเบียนบริษัท (SME)</p></div></div>
  <div class="tool"><div class="wrap">
   <div class="t2">
    <div class="panel">
@@ -919,7 +922,7 @@ html[data-theme=dark] footer .fl img{height:48px;mix-blend-mode:screen;filter:in
 <!-- ============ FS LATE PENALTY ============ -->
 <div class="view" id="v-fs-penalty">
  <div class="phead"><div class="wrap"><div class="crumb"><a href="#home">หน้าแรก</a> / <a href="#help">ตัวช่วยธุรกิจ</a> / ค่าปรับยื่นงบล่าช้า</div>
-  <h1>คำนวณค่าปรับยื่นงบการเงินล่าช้า</h1><p>ครบทั้งกรมพัฒนาธุรกิจการค้า (ส่งงบ/ประชุมผู้ถือหุ้น) และกรมสรรพากร (ภ.ง.ด.50) เพิ่มได้หลายปีบัญชีพร้อมกัน</p></div></div>
+  <h1>คำนวณค่าปรับยื่นงบการเงินล่าช้า <span class="free">ฟรี</span></h1><p>ครบทั้งกรมพัฒนาธุรกิจการค้า (ส่งงบ/ประชุมผู้ถือหุ้น) และกรมสรรพากร (ภ.ง.ด.50) เพิ่มได้หลายปีบัญชีพร้อมกัน</p></div></div>
  <div class="tool"><div class="wrap">
   <div class="panel">
    <div class="row"><label>ประเภทนิติบุคคล</label><select id="fsType" class="fs"><option value="co">บริษัทจำกัด</option><option value="lp">ห้างหุ้นส่วนจดทะเบียน/จำกัด</option></select></div>
@@ -939,7 +942,7 @@ html[data-theme=dark] footer .fl img{height:48px;mix-blend-mode:screen;filter:in
 <!-- ============ MONTHLY TAX PENALTY ============ -->
 <div class="view" id="v-tax-penalty">
  <div class="phead"><div class="wrap"><div class="crumb"><a href="#home">หน้าแรก</a> / <a href="#help">ตัวช่วยธุรกิจ</a> / ค่าปรับยื่นภาษีล่าช้า</div>
-  <h1>คำนวณค่าปรับยื่นภาษีรายเดือนล่าช้า</h1><p>ภ.ง.ด.1, 3, 53, 54 และ ภ.พ.30, 36 — คิดค่าปรับอาญา เบี้ยปรับ และเงินเพิ่ม ครบทุกเดือนที่เลือก</p></div></div>
+  <h1>คำนวณค่าปรับยื่นภาษีรายเดือนล่าช้า <span class="free">ฟรี</span></h1><p>ภ.ง.ด.1, 3, 53, 54 และ ภ.พ.30, 36 — คิดค่าปรับอาญา เบี้ยปรับ และเงินเพิ่ม ครบทุกเดือนที่เลือก</p></div></div>
  <div class="tool"><div class="wrap">
   <div class="panel">
    <div class="row"><label>แบบที่ยื่นล่าช้า</label><select id="tpForm" class="tp"><option value="wht">ภ.ง.ด.1 / 3 / 53 / 54 (หัก ณ ที่จ่าย)</option><option value="vat">ภ.พ.30 (ภาษีมูลค่าเพิ่ม)</option><option value="vat36">ภ.พ.36 (VAT จ่ายต่างประเทศ)</option></select></div>
@@ -959,7 +962,7 @@ html[data-theme=dark] footer .fl img{height:48px;mix-blend-mode:screen;filter:in
 <!-- ============ VAT LATE REGISTRATION ============ -->
 <div class="view" id="v-vat-late">
  <div class="phead"><div class="wrap"><div class="crumb"><a href="#home">หน้าแรก</a> / <a href="#help">ตัวช่วยธุรกิจ</a> / จด VAT ล่าช้า</div>
-  <h1>คำนวณค่าปรับจดทะเบียน VAT ล่าช้า</h1><p>กรณีรายรับเกิน 1.8 ล้านบาทต่อปีแล้วไม่จดทะเบียนภายใน 30 วัน — ภาษีย้อนหลัง เบี้ยปรับ 2 เท่า และเงินเพิ่ม 1.5% ต่อเดือน</p></div></div>
+  <h1>คำนวณค่าปรับจดทะเบียน VAT ล่าช้า <span class="free">ฟรี</span></h1><p>กรณีรายรับเกิน 1.8 ล้านบาทต่อปีแล้วไม่จดทะเบียนภายใน 30 วัน — ภาษีย้อนหลัง เบี้ยปรับ 2 เท่า และเงินเพิ่ม 1.5% ต่อเดือน</p></div></div>
  <div class="tool"><div class="wrap">
   <div class="panel">
    <div class="row"><label>ยอดขายที่ได้รับ</label><select id="vlBase" class="vl"><option value="in">ถือว่ารวม VAT แล้ว (ภาษี = ยอด × 7/107)</option><option value="ex">ยังไม่รวม VAT (ภาษี = ยอด × 7%)</option></select></div>
